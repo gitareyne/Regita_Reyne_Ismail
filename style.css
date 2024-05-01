@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Changed to column to stack items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1 {
+    color: #333;
+}
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Added margin for spacing between form and name/NIM */
+}
+input[type="text"], .confirmation {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.confirmation {
+    background-color: #e7f4e7;
+    color: #2a662a;
+    border: 1px solid #c3e6c3;
+    display: none;
+}
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Styles for the presented by section */
+#presented-by, #presented-by-regita, #nim, #nim-regita {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#presented-by, #presented-by-regita {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#nim, #nim-regita {
+    margin-top: 0;
+    font-size: 1em;
+    color: #666;
+}

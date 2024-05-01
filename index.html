@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Number Accepter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- New section for Regita -->
+    <div id="presented-by-regita">Presented by: Regita Reyne Ismail</div>
+    <div id="nim-regita">NIM: 221011060124</div>
+    <!-- End of new section -->
+<div class="container">
+    <h1>Enter a Scientific Number</h1>
+    <form>
+        <input type="text" id="scientificNumber" placeholder="e.g., 3.14e-15">
+        <button type="button" onclick="validateScientificNumber()">Submit</button>
+        <div id="confirmation" class="confirmation"></div>
+    </form>
+</div>
+
+<script>
+function validateScientificNumber() {
+    var input = document.getElementById('scientificNumber').value;
+    var confirmationDiv = document.getElementById('confirmation');
+    // Regular expression to check if the input is a scientific number
+    var scientificNumberRegex = /^[+-]?[0-9]*\.?[0-9]+([eE][+-]?[0-9]+)?$/;
+    
+    if (scientificNumberRegex.test(input)) {
+        confirmationDiv.style.display = 'block';
+        confirmationDiv.textContent = 'Correct! "' + input + '" is a scientific number.';
+    } else {
+        confirmationDiv.style.display = 'block';
+        confirmationDiv.textContent = 'Wrong. Please enter a number in scientific notation (for example, 1.23e-10).';
+    }
+}
+</script>
+</body>
+</html>
